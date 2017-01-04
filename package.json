@@ -1,0 +1,32 @@
+{
+  "name": "marketizer_aff_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulp.js",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-i18n": "^1.6.1",
+    "angular-resource": "^1.6.1",
+    "angular-ui-router": "^0.3.2",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "express": "^4.13.4",
+    "foundation-sites": "^6.3.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-minify": "0.0.14",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "http-server": "^0.9.0",
+    "ng-storage": "0.3.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -P http://app.marketizer.pl/ -c-1 ./build",
+    "dev": "node server.js & gulp"
+  },
+  "author": "",
+  "license": "ISC"
+}
