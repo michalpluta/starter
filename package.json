@@ -24,8 +24,7 @@
     "watchify": "^3.4.0"
   },
   "scripts": {
-    "start": "http-server -a localhost -p 8000 -P http://app.marketizer.pl/ -c-1 ./build",
-    "dev": "node server.js & gulp"
+    "start": "node server.js & gulp"
   },
   "author": "",
   "license": "ISC",
