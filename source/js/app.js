@@ -19,6 +19,6 @@ let mainModule =  angular.module('mainModule', requires);
 mainModule.config(['$urlRouterProvider', '$locationProvider', ($urlRouterProvider, $locationProvider) => {
   $urlRouterProvider.otherwise('/');
 
-  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(true);
 
 }]);
