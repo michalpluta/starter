@@ -14,6 +14,7 @@ Forked and changed from [korzewski/phaser-starter](https://github.com/korzewski/
 ### Testing
 
 * When build is finished:
+
 1. Go to ```build/test```
 2. ```karma start --reporters kjhtml```
 3. Browser will run automatically, press DEBUG button to show the errors
