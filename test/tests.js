@@ -4,7 +4,7 @@ describe("test",function(){
     });
 });
 
-describe('HomeController', function() {
+describe('elos', function() {
 
     var controller;
     var $scope;
@@ -15,9 +15,9 @@ describe('HomeController', function() {
 
         module("app.home");
 
-        inject(function(_$rootScope_, $controller) {
+        inject(function($rootScope, $controller) {
 
-            $scope = _$rootScope_.$new();
+            $scope = $rootScope.$new();
             controller = $controller("HomeController", {$scope: $scope});
 
         });

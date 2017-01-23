@@ -54,15 +54,15 @@ gulp.task('copy', function() {
     gulp.src('./source/js/**/*.html')
         .pipe(gulp.dest(outputPath + '/js'));
 
-    gulp.src('./source/test/**/*.js')
-        .pipe(gulp.dest(outputPath + '/test'));
+    // gulp.src('./source/test/**/*.js')
+    //     .pipe(gulp.dest(outputPath + '/test'));
 });
 
 gulp.task('copy:watch', function() {
     gulp.watch('./source/*.html', ['copy']);
     gulp.watch('./source/extra/**/*.*', ['copy']);
     gulp.watch('./source/js/**/*.html', ['copy']);
-    gulp.watch('./source/test/**/*.js', ['copy']);
+    //gulp.watch('./source/test/**/*.js', ['copy']);
 });
 
 

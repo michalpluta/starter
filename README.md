@@ -13,9 +13,12 @@ Forked and changed from [korzewski/phaser-starter](https://github.com/korzewski/
 
 ### Testing
 
+* First, you have to build your files - output code compiled from ES6 to ES5.
+* Test will be written in ES5 too.
 * When build is finished:
 
-1. Go to ```build/test```
+
+1. From main directory go to ```test```
 2. ```karma start --reporters kjhtml```
 3. Browser will run automatically, press DEBUG button to show the errors
 
