@@ -14,10 +14,11 @@ homeModule.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
 
 }]);
 
-
+import HomeService from '../services/home.service'
+homeModule.service('HomeService',  ['$http', HomeService]);
 
 import HomeController from './home.controller';
-homeModule.controller('HomeController', HomeController);
+homeModule.controller('HomeController', ['$scope', 'HomeService', HomeController]);
 
 
 export default homeModule;

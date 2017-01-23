@@ -17,7 +17,14 @@ module.exports = function(config) {
         files: [
             '../build/js/app.js',
             '../build/extra/angular-mocks.js',
-            './tests.js'
+            './tests.js',
+            
+            {
+                pattern:  '/test/fixtures/*.json',
+                watched:  true,
+                served:   true,
+                included: false
+            }
         ],
 
 
