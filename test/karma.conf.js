@@ -5,7 +5,7 @@ module.exports = function(config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '',
+        basePath: './',
 
 
         // frameworks to use
@@ -17,10 +17,12 @@ module.exports = function(config) {
         files: [
             '../build/js/app.js',
             '../build/extra/angular-mocks.js',
+            '../node_modules/karma-read-json/karma-read-json.js',
             './tests.js',
-            
+            './service/home.service.test.js',
+            './controller/home.controller.test.js',
             {
-                pattern:  '/test/fixtures/*.json',
+                pattern:  'json/**/*.json',
                 watched:  true,
                 served:   true,
                 included: false

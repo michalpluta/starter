@@ -1,13 +1,19 @@
 class HomeService {
-  constructor($http) {
-    console.log('HomeService');
-    this.$http = $http;
-  }
+    constructor($http) {
+        console.log('HomeService');
+        this.$http = $http;
+    }
 
-  getPosts(){
-      return this.$http.get('https://jsonplaceholder.typicode.com/posts')
+    getPost(){
+      return this.$http.get('http://jsonplaceholder.typicode.com/posts/1')
         .then(this.handleSuccess, this.handleError);
-  }
+    }
+
+
+    getPosts(){
+        return this.$http.get('http://jsonplaceholder.typicode.com/posts')
+            .then(this.handleSuccess, this.handleError);
+    }
 
     handleSuccess(res) {
         console.log('Success!');
