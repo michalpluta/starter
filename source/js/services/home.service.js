@@ -15,8 +15,8 @@ class HomeService {
             .then(this.handleSuccess, this.handleError);
     }
 
-    savePost(title, body){
-        return this.$http.post('http://jsonplaceholder.typicode.com/posts', {title: title, body: body})
+    savePost(data){
+        return this.$http.post('http://jsonplaceholder.typicode.com/posts', data)
             .then(this.handleSuccess, this.handleError);
     }
 

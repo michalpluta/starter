@@ -23,7 +23,7 @@ describe('HomeService - Testowanie serwisu', function(){
         it('zwraca jeden wpis', inject(function(HomeService, $httpBackend){
             HomeService.getPost('http://jsonplaceholder.typicode.com/posts/1').then(function(response){
                 resp = response;
-                console.log(resp.length);
+                //console.log(resp.length);
             });
             $httpBackend.flush();
 
@@ -64,4 +64,44 @@ describe('HomeService - Testowanie serwisu', function(){
         }));
         
     });
+
+
+    //savePosts
+    describe('when I call HomeService.savePosts', function () {
+
+        var dataObj = JSON.stringify(
+            {
+                title: "TestCase1",
+                body: "TestBodys1",
+                userId: "1"
+            }
+        );
+
+        beforeEach(angular.mock.inject(function($httpBackend){
+            var resp;
+            $httpBackend.expect('POST','http://jsonplaceholder.typicode.com/posts', dataObj).respond(
+                {
+                    "title": "TestCase1",
+                    "body": "TestBodys1",
+                    "userId": 1,
+                    "id": 101
+                }
+            );
+        }));
+
+        it('sprawdza czy wysłany został POST', inject(function(HomeService, $httpBackend){
+
+            HomeService.savePost(dataObj).then(function(response){
+                console.log(response);
+                resp = response;
+            });
+
+            $httpBackend.flush();
+
+
+            expect(resp.id).toEqual(101);
+            expect(true).toBe(true);
+        }));
+
+    })
 });
